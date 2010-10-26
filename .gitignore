@@ -1,0 +1,5 @@
+locale
+local_settings.py
+site_media
+*.pyc
+dev.db
