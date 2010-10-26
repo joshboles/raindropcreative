@@ -1,0 +1,6 @@
+#!/bin/sh
+source /home/serveruser/.virtualenvs/d-i-test/bin/activate
+cd /home/serveruser/development-sites/d-i-test/
+python manage.py build_static --noinput
+supervisorctl stop mccollister
+deactivate
