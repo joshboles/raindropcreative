@@ -1,6 +1,6 @@
 #!/bin/sh
-source /home/serveruser/.virtualenvs/d-i-test/bin/activate
-cd /home/serveruser/development-sites/d-i-test/
+source /home/serveruser/.virtualenvs/raindropcreative/bin/activate
+cd /home/serveruser/development-sites/raindropcreative/
 python manage.py build_static --noinput
 supervisorctl stop mccollister
 deactivate
