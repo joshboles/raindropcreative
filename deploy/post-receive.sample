@@ -2,5 +2,5 @@
 source /home/serveruser/.virtualenvs/raindropcreative/bin/activate
 cd /home/serveruser/development-sites/raindropcreative/
 python manage.py build_static --noinput
-supervisorctl stop mccollister
+supervisorctl stop raindropcreative
 deactivate
