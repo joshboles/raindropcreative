@@ -155,6 +155,7 @@ INSTALLED_APPS = [
     "sorl.thumbnail",
     "frontendadmin",
     "treebeard",
+    "tagging",
     
     # servee
     "servee",
