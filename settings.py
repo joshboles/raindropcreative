@@ -154,6 +154,7 @@ INSTALLED_APPS = [
     "improved_inlines",
     "sorl.thumbnail",
     "frontendadmin",
+    "treebeard",
     
     # servee
     "servee",
