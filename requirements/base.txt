@@ -22,7 +22,7 @@ django-uni-form==0.7.0
 
 django-servee
 PIL
--e git+git@github.com:issackelly/django-frontendadmin.git#egg=frontendadmin
+-e git+http://github.com/issackelly/django-frontendadmin.git#egg=frontendadmin
 sorl-thumbnail==3.2.5
 template_utils==0.4p2
 

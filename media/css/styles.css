@@ -1,0 +1,109 @@
+body {
+	background-color: #000;
+	font-family: Helvetica,Arial,san-serif;
+	color: #7cb7f1;
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+}
+
+img {
+	border: none;
+}
+
+#wrapper {
+	margin: 0px auto;
+	width: 800px;
+	overflow: hidden;
+}
+
+	#header {
+		height: 100px;
+		position: relative;
+	}
+	
+		#logo {
+			margin-top: 30px;
+		}
+	
+		#nav {
+			list-style-type: none;
+			position: absolute;
+			bottom: -16px;
+			*bottom: -2px;
+			right: 0px;
+			text-align: center;
+			height: 20px;
+			padding: 5px 0px;
+			
+		}
+			#nav li {
+				display: inline;
+			}
+			
+				#nav li a {
+					text-decoration: none;
+					color: white;
+					width: 62px;
+					height: 30px;
+					padding: 10px 20px;
+				}
+				
+				#nav li a:hover, .active {
+					background-image: url(../img/navHover.png);
+				}
+				
+	#body {
+		
+	}
+	
+		.content {
+			margin: 15px 0;
+			display: block;
+			overflow: hidden;
+		}	
+		
+			.project {
+				overflow: hidden;
+			}
+			
+			.project img {
+				
+			}
+			
+				.project ul {
+					padding: 0px 0px 4px 0px;
+					*margin: 0px;
+					list-style-type: none;
+				}
+				
+					.project ul li {
+						padding: 30px 21px 0px 0px;
+						margin: 21px 0px 0px 0px;
+						display: inline;
+					}
+			
+				.project h2 {
+					font-weight: 400;
+					font-size: 14px;
+					color: #FFF;
+				}
+				
+	form {
+	
+	}
+		label {
+			margin-top: 10px;
+			font-weight: 400;
+			font-size: 14px;
+			color: #FFF;
+		}
+		
+		input.text {
+			margin-bottom: 20px;
+			width: 315px;
+		}
+		
+		textarea {
+			width: 315px;
+			height: 100px;
+		}
