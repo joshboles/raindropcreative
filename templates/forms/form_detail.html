@@ -1,0 +1,23 @@
+{% extends "site_base.html" %}
+{% load uni_form_tags %}
+{% block head_title %}{{ form.title }}{% endblock %}
+
+{% block body_class %}greenPage caseStudies{% endblock %}
+
+
+
+{% block body %}
+<h1>{{ form.title }}</h1>
+{{ form.intro|safe }}
+
+<form class="uniForm" method="post"{% if form_for_form.is_multipart %} 
+    enctype="multipart/form-data"{% endif %}>
+    <fieldset class="inlineLabels">
+    {% csrf_token %}
+	{{ form_for_form|as_uni_form }}
+    <div class="ctrlHolder">
+	    <input type="submit" value="{{ form.button_text }}" class="button" />
+    </div>
+    </fieldset>
+</form>
+{% endblock %}
