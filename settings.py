@@ -147,6 +147,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "django_openid",
     "emailconfirmation",
+    "forms_builder.forms",
     "mailer",
     "staticfiles",
     "timezones",
