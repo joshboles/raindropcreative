@@ -157,6 +157,7 @@ INSTALLED_APPS = [
     "frontendadmin",
     "treebeard",
     "tagging",
+    "taggit",
     
     # servee
     "servee",
