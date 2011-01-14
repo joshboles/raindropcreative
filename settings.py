@@ -159,6 +159,9 @@ INSTALLED_APPS = [
     "tagging",
     "taggit",
     
+    # internal
+    "work",
+    
     # servee
     "servee",
     "servee.wysiwyg",
