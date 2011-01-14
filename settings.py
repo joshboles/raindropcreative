@@ -155,6 +155,7 @@ INSTALLED_APPS = [
     "improved_inlines",
     "sorl.thumbnail",
     "frontendadmin",
+	"south",
     "treebeard",
     "tagging",
     "taggit",
