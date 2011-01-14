@@ -19,8 +19,7 @@ pytz==2010h
 django-openid==0.2.3.dev1
 python-openid==2.2.5
 django-uni-form==0.7.0
-
-django-servee
+-e git+git@github.com:servee/servee.git#egg=django_servee
 PIL
 -e git+http://github.com/issackelly/django-frontendadmin.git#egg=frontendadmin
 sorl-thumbnail==3.2.5
