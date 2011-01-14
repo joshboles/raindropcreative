@@ -5,8 +5,8 @@
 
 --extra-index-url=http://dist.pinaxproject.com/dev/
 
-Django==1.2.3
-Pinax==0.9a1
+Django==1.2.4
+Pinax
 
 django-debug-toolbar==0.8.3
 django-staticfiles==0.2.0
@@ -25,7 +25,7 @@ PIL
 sorl-thumbnail==3.2.5
 template_utils==0.4p2
 
-BeautifulSoup==3.0.8.1
+BeautifulSoup
 django-improved-inlines>=0.2.1
-django-treebeard==1.60
+django-treebeard>=1.60
 django-tagging==0.3.1
