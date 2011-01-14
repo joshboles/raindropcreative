@@ -7,3 +7,5 @@
 # See http://pip-installer.org/requirement-format.html for more information.
 django-forms-builder
 
+psycopg2
+gunicorn
