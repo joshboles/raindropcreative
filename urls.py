@@ -18,6 +18,7 @@ urlpatterns = patterns("",
     url(r"^frontendadmin/", include("frontendadmin.urls")),
     url(r"^openid/(.*)", PinaxConsumer()),
     url(r"^forms/", include("forms_builder.forms.urls")),
+	url(r"^work/", include("work.urls")),
     
 )
 
