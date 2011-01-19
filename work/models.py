@@ -18,7 +18,7 @@ class Project(models.Model):
 		return None
 		
 	class Meta:
-		ordering = "order"
+		ordering = ["order",]
 
 class Photo(models.Model):
 	project = models.ForeignKey(Project, related_name="photo_set")
@@ -27,7 +27,7 @@ class Photo(models.Model):
 	order = models.IntegerField()
 	
 	class Meta:
-		ordering = "order"
+		ordering = ["order",]
 
 	def __unicode__(self):
 		return os.path.split(self.file.name)[1]
