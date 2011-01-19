@@ -158,7 +158,6 @@ INSTALLED_APPS = [
 	"south",
     "treebeard",
     "tagging",
-    "taggit",
     
     # internal
     "work",
