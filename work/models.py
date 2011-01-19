@@ -1,5 +1,4 @@
 from django.db import models
-import datetime
 import os
 
 # Create your models here.
@@ -17,12 +16,18 @@ class Project(models.Model):
 		if self.photo_set.count():
 			return self.photo_set.all()[0]
 		return None
+		
+	class Meta:
+		ordering = "order"
 
 class Photo(models.Model):
 	project = models.ForeignKey(Project, related_name="photo_set")
 	description = models.TextField(blank=True, null=True)
 	file = models.FileField(upload_to="project_photo")
 	order = models.IntegerField()
+	
+	class Meta:
+		ordering = "order"
 
 	def __unicode__(self):
 		return os.path.split(self.file.name)[1]
