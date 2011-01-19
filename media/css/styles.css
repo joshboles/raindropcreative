@@ -126,5 +126,5 @@ img {
 }
 
 .uniForm .textInput, .uniForm textarea {
-	width: 315px;
+	width: 315px !important;
 }
