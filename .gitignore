@@ -1,5 +1,6 @@
 locale
 local_settings.py
+local_fab_settings.py
 site_media
 *.pyc
 dev.db
