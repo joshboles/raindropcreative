@@ -10,14 +10,14 @@
     	<ul class="projectList">
     	{% for project in project_list %}
         {% thumbnail project.get_primary_photo.file 165x165 crop as thumb %}
-    		<li><a href="{{ MEDIA_URL }}{{ project.get_primary_photo.file }}" class="fancied" rel="{{project.name}}"><img src="{{ thumb }}" /></a> <br /> <span class="projectName">{{ project.name }}</span>
-    		 
-			{% for photo in project.photo_set.all %}
-				{% if not forloop.first %}
-					<li style="display: none;"><a class="fancied" rel="{{project.name}}" href="{{ MEDIA_URL }}{{photo.file}}">&nbsp;</a></li>
-				{% endif %}
-			{% endfor %}
-    		  
+			<li><a href="{{ MEDIA_URL }}{{ project.get_primary_photo.file }}" class="fancied" rel="{{project.name}}"><img src="{{ thumb }}" /></a> <br /> <span class="projectName">{{ project.name }}</span>
+				<ul class="photoList">
+					{% for photo in project.photo_set.all %}
+						{% if not forloop.first %}
+							<li><a class="fancied" rel="{{project.name}}" href="{{ MEDIA_URL }}{{photo.file}}"></a></li>
+						{% endfor %}
+					{% endfor %}
+				</ul>
     		</li>
     	{% endfor %}
     	</ul>
