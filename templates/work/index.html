@@ -2,9 +2,7 @@
 {% load thumbnail %}
 
 {% block body %}
-    <img class="masthead" src="{{STATIC_URL}}img/mastheads/work.png" />
-    <hr />
-    
+    <img class="masthead" src="{{STATIC_URL}}img/mastheads/work.png" />    
     {% if project_list %}
     	<ul class="projectList">
     	{% for project in project_list %}
