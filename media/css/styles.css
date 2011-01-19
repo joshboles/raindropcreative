@@ -128,3 +128,7 @@ img {
 .uniForm .textInput, .uniForm textarea {
 	width: 315px !important;
 }
+
+div.ctrlHolder input {
+	padding: 0px !important;
+}
