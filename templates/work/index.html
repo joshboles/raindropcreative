@@ -15,7 +15,7 @@
 					{% for photo in project.photo_set.all %}
 						{% if not forloop.first %}
 							<li><a class="fancied" rel="{{project.name}}" href="{{ MEDIA_URL }}{{photo.file}}"></a></li>
-						{% endfor %}
+						{% endif %}
 					{% endfor %}
 				</ul>
     		</li>
