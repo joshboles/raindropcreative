@@ -1,4 +1,5 @@
 {% extends 'site_base.html' %}
+{% load thumbnail %}
 
 {% block body %}
     <img class="masthead" src="{{STATIC_URL}}img/mastheads/work.png" />
@@ -8,19 +9,11 @@
     {% if project_list %}
     	<ul class="projectList">
     	{% for project in project_list %}
-    		<li><a href="{{STATIC_URL}}img/imgHolder.png" class="fancied" rel="{{project.name}}"><img src="{{STATIC_URL}}img/imgHolder.png" /></a> <br /> <span class="projectName">{{ project.name }}</span>
+        {% thumbnail  165x165 crop as thumb %}
+    		<li><a href="{{ MEDIA_URL }}{{ project.get_primary_photo.file }}" class="fancied" rel="{{project.name}}"><img src="{{ thumb }}" /></a> <br /> <span class="projectName">{{ project.name }}</span>
     		  <ul class="photoList">
         		  {% for photo in project.photo_set.all %}
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
-            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" href="{{ MEDIA_URL }}{{photo.file}}"></a></li>
         		  {% endfor %}
     		  </ul>
     		</li>
