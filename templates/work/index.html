@@ -13,7 +13,9 @@
     		<li><a href="{{ MEDIA_URL }}{{ project.get_primary_photo.file }}" class="fancied" rel="{{project.name}}"><img src="{{ thumb }}" /></a> <br /> <span class="projectName">{{ project.name }}</span>
     		 
 			{% for photo in project.photo_set.all %}
-				<li style="display: none;"><a class="fancied" rel="{{project.name}}" href="{{ MEDIA_URL }}{{photo.file}}"></a></li>
+				{% if not forloop.first %}
+					<li style="display: none;"><a class="fancied" rel="{{project.name}}" href="{{ MEDIA_URL }}{{photo.file}}">&nbsp;</a></li>
+				{% endif %}
 			{% endfor %}
     		  
     		</li>
