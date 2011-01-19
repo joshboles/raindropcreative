@@ -14,6 +14,6 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#nav li a[href^=' + location.pathname + ']').addClass('active');
+	$('#nav li a[href=' + location.pathname + ']').addClass('active');
 
 });	
