@@ -119,3 +119,9 @@ img {
 			width: 315px;
 			height: 100px;
 		}
+		
+/***** Overwriting of uniform styles *****/
+.uniForm .ctrlHolder {
+	border-bottom: none !important;
+}
+}
