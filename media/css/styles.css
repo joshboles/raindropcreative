@@ -124,4 +124,7 @@ img {
 .uniForm .ctrlHolder {
 	border-bottom: none !important;
 }
+
+.uniForm .textInput, .uniForm textarea {
+	width: 315px;
 }
