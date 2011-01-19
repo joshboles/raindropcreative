@@ -83,6 +83,10 @@ img {
         .projectList li:nth-child(4n+0){
             margin-right: 0px;
         }
+
+		.projectList li:nth-child(4n+1){
+			margin-left: 1px;
+		}
         
         .projectList img {
             border: 10px solid #FFF;
