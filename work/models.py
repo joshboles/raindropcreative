@@ -12,17 +12,17 @@ class Project(models.Model):
 	
 	def __unicode__(self):
 		return self.name
-		
-    def get_primary_photo(self):
-        if self.photo_set.count():
-            return self.photo_set.all()[0]
-        return None
+
+	def get_primary_photo(self):
+		if self.photo_set.count():
+			return self.photo_set.all()[0]
+		return None
 
 class Photo(models.Model):
 	project = models.ForeignKey(Project, related_name="photo_set")
 	description = models.TextField(blank=True, null=True)
 	file = models.FileField(upload_to="project_photo")
 	order = models.IntegerField()
-	
+
 	def __unicode__(self):
 		return os.path.split(self.file.name)[1]
