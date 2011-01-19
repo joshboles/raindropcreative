@@ -1,11 +1,30 @@
 {% extends 'site_base.html' %}
 
-
 {% block body %}
-{% if project_list %}
-	{% for project in project_list %}
-		<li>{{ project.name }}</li>
-	{% endfor %}
-	</ul>
-{% endif %}
+    <img class="masthead" src="{{STATIC_URL}}img/mastheads/work.png" />
+    <img src="{{STATIC_URL}}img/work.png" />
+    <hr />
+    
+    {% if project_list %}
+    	<ul class="projectList">
+    	{% for project in project_list %}
+    		<li><a href="{{STATIC_URL}}img/imgHolder.png" class="fancied" rel="{{project.name}}"><img src="{{STATIC_URL}}img/imgHolder.png" /></a> <br /> <span class="projectName">{{ project.name }}</span>
+    		  <ul class="photoList">
+        		  {% for photo in project.photo_set.all %}
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+            		  <li><a class="fancied" rel="{{project.name}}" src="{{STATIC_URL}}img/imgHolder.png"></a></li>
+        		  {% endfor %}
+    		  </ul>
+    		</li>
+    	{% endfor %}
+    	</ul>
+    {% endif %}
 {% endblock %}

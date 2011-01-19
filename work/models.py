@@ -7,8 +7,8 @@ class Project(models.Model):
 	name = models.CharField(max_length=64)
 	order = models.IntegerField()
 	active = models.BooleanField()
-	# modified = models.DateTimeField(auto_now=True)
-	# created = models.DateTimeField(auto_now_add=True)
+	modified = models.DateTimeField(auto_now=True)
+	created = models.DateTimeField(auto_now_add=True)
 	
 	def __unicode__(self):
 		return self.name

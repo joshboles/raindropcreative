@@ -56,37 +56,45 @@ img {
 		
 	}
 	
+	   .masthead {
+	       margin-bottom: 20px;
+	   }
+	
 		.content {
 			margin: 15px 0;
 			display: block;
 			overflow: hidden;
 		}	
-		
-			.project {
-				overflow: hidden;
-			}
-			
-			.project img {
 				
-			}
-			
-				.project ul {
-					padding: 0px 0px 4px 0px;
-					*margin: 0px;
-					list-style-type: none;
-				}
-				
-					.project ul li {
-						padding: 30px 21px 0px 0px;
-						margin: 21px 0px 0px 0px;
-						display: inline;
-					}
-			
-				.project h2 {
-					font-weight: 400;
-					font-size: 14px;
-					color: #FFF;
-				}
+    .projectList {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+        .projectList li {
+            display:inline-block;
+            vertical-align: top;
+            zoom: 1;
+            *display: inline;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .projectList li:nth-child(4n+0){
+            margin-right: 0px;
+        }
+        
+        .projectList img {
+            border: 10px solid #FFF;
+        }
+        
+        .projectName {
+            font-size: 12px;
+        }
+        
+        .photoList {
+            display: none;
+        }
 				
 	form {
 	
