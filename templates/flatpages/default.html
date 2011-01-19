@@ -2,4 +2,4 @@
 {% load inlines frontendadmin_tags %}
 {% block head_title %}{{ flatpage.title }}{% endblock %}
 
-{% block body %}{% frontendadmin_change flatpage %}{{ flatpage.content|safe|render_inlines }}{% endblock %}
+{% block body %}{{ flatpage.content|safe|render_inlines }}{% frontendadmin_change flatpage %}{% endblock %}
